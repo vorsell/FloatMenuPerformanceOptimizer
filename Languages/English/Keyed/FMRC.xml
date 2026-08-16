@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FMRC_SettingsCategory>Float Menu Performance Optimizer</FMRC_SettingsCategory>
+  <FMRC_ModeLabel>Float Menu Performance Optimizer</FMRC_ModeLabel>
+  <FMRC_Disabled>Off</FMRC_Disabled>
+  <FMRC_DisabledTooltip>Use RimWorld's original behavior: fully refresh the float menu every 4 rendered frames, without click-time validation from this mod.</FMRC_DisabledTooltip>
+  <FMRC_Timed>Frame mode</FMRC_Timed>
+  <FMRC_TimedTooltip>Fully refresh the float menu after a configurable number of rendered frames.</FMRC_TimedTooltip>
+  <FMRC_TimedIntervalLabel>Full regeneration interval (rendered frames)</FMRC_TimedIntervalLabel>
+  <FMRC_TimedExplanation>Explanation: The float menu is fully refreshed after the configured number of rendered frames. Vanilla refreshes every 4 frames.</FMRC_TimedExplanation>
+  <FMRC_TimedLowWarning>&lt;color=#D55E00&gt;Warning:&lt;/color&gt; Intervals below 4 frames regenerate more often than vanilla and may reduce FPS.</FMRC_TimedLowWarning>
+  <FMRC_TimedLongSuggestion>&lt;color=#009E73&gt;Suggestion:&lt;/color&gt; For very long intervals, consider using Manual mode instead.</FMRC_TimedLongSuggestion>
+  <FMRC_Adaptive>Time mode</FMRC_Adaptive>
+  <FMRC_AdaptiveTooltip>Fully refresh the float menu after a configurable real-time interval, while always waiting at least 4 rendered frames.</FMRC_AdaptiveTooltip>
+  <FMRC_AdaptiveIntervalLabel>Target real-time interval (seconds)</FMRC_AdaptiveIntervalLabel>
+  <FMRC_AdaptiveExplanation>Explanation: The float menu is fully refreshed after the configured real-time interval, but never before at least 4 rendered frames have passed.</FMRC_AdaptiveExplanation>
+  <FMRC_AdaptiveZeroWarning>&lt;color=#D55E00&gt;Warning:&lt;/color&gt; A value of 0 uses the default interval of 0.50 seconds.</FMRC_AdaptiveZeroWarning>
+  <FMRC_AdaptiveLowWarning>&lt;color=#D55E00&gt;Warning:&lt;/color&gt; Intervals at or below 0.03 seconds can regenerate as often as every 4 frames and may reduce FPS.</FMRC_AdaptiveLowWarning>
+  <FMRC_AdaptiveLongSuggestion>&lt;color=#009E73&gt;Suggestion:&lt;/color&gt; For intervals above 10 seconds, consider using Manual mode instead.</FMRC_AdaptiveLongSuggestion>
+  <FMRC_Lazy>Manual mode (only when an option is clicked)</FMRC_Lazy>
+  <FMRC_LazyTooltip>Keep the menu's opening snapshot and refresh its current state only when an option is clicked.</FMRC_LazyTooltip>
+  <FMRC_LazyMessage>Show a rejection message when click validation fails</FMRC_LazyMessage>
+  <FMRC_LazyMessageTooltip>The game does not expose a universal failure reason, so the message is necessarily generic except when the target has disappeared.</FMRC_LazyMessageTooltip>
+  <FMRC_ChangesApply>Changes apply immediately. No restart is required for settings changes.</FMRC_ChangesApply>
+  <FMRC_ResetSettings>Reset settings</FMRC_ResetSettings>
+  <FMRC_ClickValidationExplanation>Explanation: Unless the mod is Off, clicking an option immediately validates its current state. If it is no longer valid, the option is disabled and the menu remains open. This checkbox only controls the rejection message.</FMRC_ClickValidationExplanation>
+  <FMRC_TargetGone>The target is no longer available.</FMRC_TargetGone>
+  <FMRC_ActionUnavailable>This action is no longer available because its requirements have changed.</FMRC_ActionUnavailable>
+</LanguageData>

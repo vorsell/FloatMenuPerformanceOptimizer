@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FMRC_SettingsCategory>右クリックメニュー性能最適化</FMRC_SettingsCategory>
+  <FMRC_ModeLabel>右クリックメニュー性能最適化</FMRC_ModeLabel>
+  <FMRC_Disabled>オフ</FMRC_Disabled>
+  <FMRC_DisabledTooltip>RimWorld 標準の動作を使用します。右クリックメニューを 4 描画フレームごとに完全更新し、本 Mod によるクリック時検証は行いません。</FMRC_DisabledTooltip>
+  <FMRC_Timed>フレームモード</FMRC_Timed>
+  <FMRC_TimedTooltip>設定した描画フレーム数の間隔で右クリックメニューを完全更新します。</FMRC_TimedTooltip>
+  <FMRC_TimedIntervalLabel>完全再生成の間隔（描画フレーム）</FMRC_TimedIntervalLabel>
+  <FMRC_TimedExplanation>説明：右クリックメニューは設定した描画フレーム数の間隔で完全更新されます。バニラは 4 フレームごとに更新します。</FMRC_TimedExplanation>
+  <FMRC_TimedLowWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;4 フレーム未満ではバニラより頻繁に再生成され、FPS が低下する可能性があります。</FMRC_TimedLowWarning>
+  <FMRC_TimedLongSuggestion>&lt;color=#009E73&gt;提案：&lt;/color&gt;非常に長い間隔では、手動モードの使用も検討してください。</FMRC_TimedLongSuggestion>
+  <FMRC_Adaptive>時間モード</FMRC_Adaptive>
+  <FMRC_AdaptiveTooltip>設定した実時間の間隔で右クリックメニューを完全更新し、更新間隔として最低 4 描画フレームを確保します。</FMRC_AdaptiveTooltip>
+  <FMRC_AdaptiveIntervalLabel>目標実時間間隔（秒）</FMRC_AdaptiveIntervalLabel>
+  <FMRC_AdaptiveExplanation>説明：右クリックメニューは設定した実時間の間隔で完全更新されますが、最低 4 描画フレームが経過するまでは更新されません。</FMRC_AdaptiveExplanation>
+  <FMRC_AdaptiveZeroWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;0 を指定した場合は既定値の 0.50 秒を使用します。</FMRC_AdaptiveZeroWarning>
+  <FMRC_AdaptiveLowWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;0 より大きく 0.03 秒以下の間隔では 4 フレームごとに再生成され、FPS が低下する可能性があります。</FMRC_AdaptiveLowWarning>
+  <FMRC_AdaptiveLongSuggestion>&lt;color=#009E73&gt;提案：&lt;/color&gt;10 秒を超える間隔では、手動モードの使用も検討してください。</FMRC_AdaptiveLongSuggestion>
+  <FMRC_Lazy>手動モード（選択肢をクリックした時のみ）</FMRC_Lazy>
+  <FMRC_LazyTooltip>メニューを開いた時のスナップショットを維持し、選択肢をクリックした時だけ現在の状態を更新して検証します。</FMRC_LazyTooltip>
+  <FMRC_LazyMessage>クリック時の検証に失敗したら拒否メッセージを表示</FMRC_LazyMessage>
+  <FMRC_LazyMessageTooltip>ゲームは共通の失敗理由を提供しないため、対象が消えた場合を除き、メッセージは一般的な内容になります。</FMRC_LazyMessageTooltip>
+  <FMRC_ChangesApply>設定変更は即座に適用されます。ゲームの再起動は不要です。</FMRC_ChangesApply>
+  <FMRC_ResetSettings>設定をリセット</FMRC_ResetSettings>
+  <FMRC_ClickValidationExplanation>説明：本Modがオフでない場合、選択肢をクリックすると現在の状態を即時検証します。操作が無効なら選択肢を無効化し、メニューは開いたままにします。このチェックは拒否メッセージの表示だけを切り替えます。</FMRC_ClickValidationExplanation>
+  <FMRC_TargetGone>対象は利用できなくなりました。</FMRC_TargetGone>
+  <FMRC_ActionUnavailable>条件が変化したため、この操作は利用できなくなりました。</FMRC_ActionUnavailable>
+</LanguageData>

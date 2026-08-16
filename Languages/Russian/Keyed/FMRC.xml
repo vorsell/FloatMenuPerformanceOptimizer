@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FMRC_SettingsCategory>Оптимизация контекстного меню</FMRC_SettingsCategory>
+  <FMRC_ModeLabel>Оптимизация контекстного меню</FMRC_ModeLabel>
+  <FMRC_Disabled>Выключено</FMRC_Disabled>
+  <FMRC_DisabledTooltip>Использовать оригинальное поведение RimWorld: полностью обновлять меню каждые 4 кадра без дополнительной проверки при выборе.</FMRC_DisabledTooltip>
+  <FMRC_Timed>Режим по кадрам</FMRC_Timed>
+  <FMRC_TimedTooltip>Полностью обновлять контекстное меню через заданное число отрисованных кадров.</FMRC_TimedTooltip>
+  <FMRC_TimedIntervalLabel>Интервал полного обновления (кадры)</FMRC_TimedIntervalLabel>
+  <FMRC_TimedExplanation>Описание: контекстное меню полностью обновляется через заданное число отрисованных кадров. В оригинале — каждые 4 кадра.</FMRC_TimedExplanation>
+  <FMRC_TimedLowWarning>&lt;color=#D55E00&gt;Предупреждение:&lt;/color&gt; интервал менее 4 кадров обновляет меню чаще оригинала и может снизить FPS.</FMRC_TimedLowWarning>
+  <FMRC_TimedLongSuggestion>&lt;color=#009E73&gt;Совет:&lt;/color&gt; при очень большом интервале рассмотрите ручной режим.</FMRC_TimedLongSuggestion>
+  <FMRC_Adaptive>Режим по времени</FMRC_Adaptive>
+  <FMRC_AdaptiveTooltip>Полностью обновлять контекстное меню через заданный интервал реального времени, но не ранее чем через 4 кадра.</FMRC_AdaptiveTooltip>
+  <FMRC_AdaptiveIntervalLabel>Целевой интервал реального времени (секунды)</FMRC_AdaptiveIntervalLabel>
+  <FMRC_AdaptiveExplanation>Описание: контекстное меню полностью обновляется через заданный интервал реального времени, но между обновлениями всегда проходит не менее 4 кадров.</FMRC_AdaptiveExplanation>
+  <FMRC_AdaptiveZeroWarning>&lt;color=#D55E00&gt;Предупреждение:&lt;/color&gt; значение 0 использует стандартный интервал 0,50 секунды.</FMRC_AdaptiveZeroWarning>
+  <FMRC_AdaptiveLowWarning>&lt;color=#D55E00&gt;Предупреждение:&lt;/color&gt; интервал от 0,01 до 0,03 секунды может обновлять меню каждые 4 кадра и снижать FPS.</FMRC_AdaptiveLowWarning>
+  <FMRC_AdaptiveLongSuggestion>&lt;color=#009E73&gt;Совет:&lt;/color&gt; при интервале более 10 секунд рассмотрите ручной режим.</FMRC_AdaptiveLongSuggestion>
+  <FMRC_Lazy>Ручной режим (проверка только при выборе)</FMRC_Lazy>
+  <FMRC_LazyTooltip>Сохранять исходный снимок меню и обновлять текущее состояние только при выборе варианта.</FMRC_LazyTooltip>
+  <FMRC_LazyMessage>Показывать сообщение при отклонении выбранного действия</FMRC_LazyMessage>
+  <FMRC_LazyMessageTooltip>Игра не предоставляет универсальную причину отказа, поэтому сообщение является общим, кроме случая исчезновения цели.</FMRC_LazyMessageTooltip>
+  <FMRC_ChangesApply>Изменения применяются сразу. Перезапуск игры не требуется.</FMRC_ChangesApply>
+  <FMRC_ResetSettings>Сбросить настройки</FMRC_ResetSettings>
+  <FMRC_ClickValidationExplanation>Описание: если мод не выключен, выбранное действие сразу проверяется по текущему состоянию. Недоступный вариант отключается, а меню остаётся открытым. Флажок управляет только сообщением об отказе.</FMRC_ClickValidationExplanation>
+  <FMRC_TargetGone>Цель больше недоступна.</FMRC_TargetGone>
+  <FMRC_ActionUnavailable>Действие больше недоступно, так как его условия изменились.</FMRC_ActionUnavailable>
+</LanguageData>

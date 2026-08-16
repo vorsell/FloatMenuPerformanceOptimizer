@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FMRC_SettingsCategory>右鍵選單效能最佳化</FMRC_SettingsCategory>
+  <FMRC_ModeLabel>右鍵選單效能最佳化</FMRC_ModeLabel>
+  <FMRC_Disabled>關閉</FMRC_Disabled>
+  <FMRC_DisabledTooltip>使用 RimWorld 原版行為：右鍵選單每 4 個渲染幀完整更新一次，本 Mod 不增加點擊時驗證。</FMRC_DisabledTooltip>
+  <FMRC_Timed>幀模式</FMRC_Timed>
+  <FMRC_TimedTooltip>依照可設定的渲染幀數間隔完整更新右鍵選單。</FMRC_TimedTooltip>
+  <FMRC_TimedIntervalLabel>完整重新生成間隔（渲染畫面）</FMRC_TimedIntervalLabel>
+  <FMRC_TimedExplanation>說明：右鍵選單會依照設定的渲染幀間隔完整更新；原版每 4 個渲染幀更新一次。</FMRC_TimedExplanation>
+  <FMRC_TimedLowWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;低於 4 幀的間隔會比原版更頻繁地重新生成選單，可能降低 FPS。</FMRC_TimedLowWarning>
+  <FMRC_TimedLongSuggestion>&lt;color=#009E73&gt;建議：&lt;/color&gt;間隔非常長時，可以考慮改用手動模式。</FMRC_TimedLongSuggestion>
+  <FMRC_Adaptive>時間模式</FMRC_Adaptive>
+  <FMRC_AdaptiveTooltip>依照可設定的真實時間間隔完整更新右鍵選單，但兩次更新之間至少間隔 4 個渲染幀。</FMRC_AdaptiveTooltip>
+  <FMRC_AdaptiveIntervalLabel>目標真實時間間隔（秒）</FMRC_AdaptiveIntervalLabel>
+  <FMRC_AdaptiveExplanation>說明：右鍵選單會依照設定的真實時間間隔完整更新，但至少等待 4 個渲染幀後才會更新。</FMRC_AdaptiveExplanation>
+  <FMRC_AdaptiveZeroWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;數值為 0 時將使用預設的 0.50 秒間隔。</FMRC_AdaptiveZeroWarning>
+  <FMRC_AdaptiveLowWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;大於 0 且不超過 0.03 秒的間隔可能讓選單每 4 幀重新生成一次，並降低 FPS。</FMRC_AdaptiveLowWarning>
+  <FMRC_AdaptiveLongSuggestion>&lt;color=#009E73&gt;建議：&lt;/color&gt;間隔超過 10 秒時，可以考慮改用手動模式。</FMRC_AdaptiveLongSuggestion>
+  <FMRC_Lazy>手動模式（僅在點擊選項時驗證）</FMRC_Lazy>
+  <FMRC_LazyTooltip>選單開啟期間保留初始快照，僅在點擊選項時更新並驗證目前狀態。</FMRC_LazyTooltip>
+  <FMRC_LazyMessage>點擊驗證失敗時顯示拒絕訊息</FMRC_LazyMessage>
+  <FMRC_LazyMessageTooltip>遊戲沒有提供通用的失敗原因；除了目標消失以外，提示內容只能使用概括性的說明。</FMRC_LazyMessageTooltip>
+  <FMRC_ChangesApply>設定變更會立即生效，不需要重新啟動遊戲。</FMRC_ChangesApply>
+  <FMRC_ResetSettings>重設設定</FMRC_ResetSettings>
+  <FMRC_ClickValidationExplanation>說明：本Mod未關閉時，點擊選項會立即依目前狀態重新驗證。若操作已失效，選項會變灰且選單保持開啟。此開關僅控制是否顯示拒絕訊息。</FMRC_ClickValidationExplanation>
+  <FMRC_TargetGone>目標已無法使用。</FMRC_TargetGone>
+  <FMRC_ActionUnavailable>由於操作條件已經改變，此操作已無法使用。</FMRC_ActionUnavailable>
+</LanguageData>

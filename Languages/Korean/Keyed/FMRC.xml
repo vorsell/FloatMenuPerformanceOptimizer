@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FMRC_SettingsCategory>우클릭 메뉴 성능 최적화</FMRC_SettingsCategory>
+  <FMRC_ModeLabel>우클릭 메뉴 성능 최적화</FMRC_ModeLabel>
+  <FMRC_Disabled>끄기</FMRC_Disabled>
+  <FMRC_DisabledTooltip>RimWorld 기본 동작을 사용합니다. 우클릭 메뉴를 4 렌더링 프레임마다 완전히 갱신하며 이 Mod의 클릭 시 검증은 적용하지 않습니다.</FMRC_DisabledTooltip>
+  <FMRC_Timed>프레임 모드</FMRC_Timed>
+  <FMRC_TimedTooltip>설정한 렌더링 프레임 간격마다 우클릭 메뉴를 완전히 갱신합니다.</FMRC_TimedTooltip>
+  <FMRC_TimedIntervalLabel>전체 재생성 간격(렌더링 프레임)</FMRC_TimedIntervalLabel>
+  <FMRC_TimedExplanation>설명: 우클릭 메뉴는 설정한 렌더링 프레임 간격마다 완전히 갱신됩니다. 바닐라는 4프레임마다 갱신합니다.</FMRC_TimedExplanation>
+  <FMRC_TimedLowWarning>&lt;color=#D55E00&gt;경고:&lt;/color&gt; 4프레임보다 짧은 간격은 바닐라보다 자주 재생성되어 FPS가 낮아질 수 있습니다.</FMRC_TimedLowWarning>
+  <FMRC_TimedLongSuggestion>&lt;color=#009E73&gt;권장:&lt;/color&gt; 간격이 매우 길다면 수동 모드 사용을 고려하십시오.</FMRC_TimedLongSuggestion>
+  <FMRC_Adaptive>시간 모드</FMRC_Adaptive>
+  <FMRC_AdaptiveTooltip>설정한 실제 시간 간격마다 우클릭 메뉴를 완전히 갱신하며, 갱신 사이에 최소 4 렌더링 프레임을 둡니다.</FMRC_AdaptiveTooltip>
+  <FMRC_AdaptiveIntervalLabel>목표 실제 시간 간격(초)</FMRC_AdaptiveIntervalLabel>
+  <FMRC_AdaptiveExplanation>설명: 우클릭 메뉴는 설정한 실제 시간 간격마다 완전히 갱신되지만 최소 4 렌더링 프레임이 지난 뒤에만 갱신됩니다.</FMRC_AdaptiveExplanation>
+  <FMRC_AdaptiveZeroWarning>&lt;color=#D55E00&gt;경고:&lt;/color&gt; 값이 0이면 기본 간격인 0.50초를 사용합니다.</FMRC_AdaptiveZeroWarning>
+  <FMRC_AdaptiveLowWarning>&lt;color=#D55E00&gt;경고:&lt;/color&gt; 0보다 크고 0.03초 이하인 간격은 4프레임마다 재생성되어 FPS가 낮아질 수 있습니다.</FMRC_AdaptiveLowWarning>
+  <FMRC_AdaptiveLongSuggestion>&lt;color=#009E73&gt;권장:&lt;/color&gt; 간격이 10초를 초과하면 수동 모드 사용을 고려하십시오.</FMRC_AdaptiveLongSuggestion>
+  <FMRC_Lazy>수동 모드(항목을 클릭할 때만 검증)</FMRC_Lazy>
+  <FMRC_LazyTooltip>메뉴를 열 때의 스냅샷을 유지하고 항목을 클릭할 때만 현재 상태를 갱신하고 검증합니다.</FMRC_LazyTooltip>
+  <FMRC_LazyMessage>클릭 검증 실패 시 거부 메시지 표시</FMRC_LazyMessage>
+  <FMRC_LazyMessageTooltip>게임은 공통 실패 원인을 제공하지 않으므로 대상이 사라진 경우를 제외하면 일반적인 메시지가 표시됩니다.</FMRC_LazyMessageTooltip>
+  <FMRC_ChangesApply>설정 변경은 즉시 적용됩니다. 게임을 다시 시작할 필요가 없습니다.</FMRC_ChangesApply>
+  <FMRC_ResetSettings>설정 초기화</FMRC_ResetSettings>
+  <FMRC_ClickValidationExplanation>설명: 이 Mod가 꺼져 있지 않으면 항목을 클릭할 때 현재 상태를 즉시 검증합니다. 작업이 무효라면 항목을 비활성화하고 메뉴를 열린 상태로 유지합니다. 이 체크박스는 거부 메시지 표시만 제어합니다.</FMRC_ClickValidationExplanation>
+  <FMRC_TargetGone>대상을 더 이상 사용할 수 없습니다.</FMRC_TargetGone>
+  <FMRC_ActionUnavailable>조건이 변경되어 이 작업을 더 이상 사용할 수 없습니다.</FMRC_ActionUnavailable>
+</LanguageData>

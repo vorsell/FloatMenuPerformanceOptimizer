@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FMRC_SettingsCategory>右键菜单性能优化</FMRC_SettingsCategory>
+  <FMRC_ModeLabel>右键菜单性能优化</FMRC_ModeLabel>
+  <FMRC_Disabled>关闭</FMRC_Disabled>
+  <FMRC_DisabledTooltip>使用 RimWorld 原版行为：右键菜单每 4 个渲染帧完整刷新一次，本 Mod 不增加点击时验证。</FMRC_DisabledTooltip>
+  <FMRC_Timed>帧模式</FMRC_Timed>
+  <FMRC_TimedTooltip>按照可设置的渲染帧数间隔完整刷新右键菜单。</FMRC_TimedTooltip>
+  <FMRC_TimedIntervalLabel>完整重新生成间隔（渲染帧）</FMRC_TimedIntervalLabel>
+  <FMRC_TimedExplanation>说明：右键菜单会按照设定的渲染帧间隔完整刷新；原版每 4 个渲染帧刷新一次。</FMRC_TimedExplanation>
+  <FMRC_TimedLowWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;低于 4 帧的间隔会比原版更频繁地重新生成菜单，可能导致帧数下降。</FMRC_TimedLowWarning>
+  <FMRC_TimedLongSuggestion>&lt;color=#009E73&gt;建议：&lt;/color&gt;间隔非常长时，可以考虑改用手动模式。</FMRC_TimedLongSuggestion>
+  <FMRC_Adaptive>时间模式</FMRC_Adaptive>
+  <FMRC_AdaptiveTooltip>按照可设置的真实时间间隔完整刷新右键菜单，但两次刷新之间至少间隔 4 个渲染帧。</FMRC_AdaptiveTooltip>
+  <FMRC_AdaptiveIntervalLabel>目标真实时间间隔（秒）</FMRC_AdaptiveIntervalLabel>
+  <FMRC_AdaptiveExplanation>说明：右键菜单会按照设定的真实时间间隔完整刷新，但至少等待 4 个渲染帧后才会刷新。</FMRC_AdaptiveExplanation>
+  <FMRC_AdaptiveZeroWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;数值为 0 时将使用默认的 0.50 秒间隔。</FMRC_AdaptiveZeroWarning>
+  <FMRC_AdaptiveLowWarning>&lt;color=#D55E00&gt;警告：&lt;/color&gt;大于 0 且不超过 0.03 秒的间隔可能使菜单每 4 帧就重新生成一次，并导致帧数下降。</FMRC_AdaptiveLowWarning>
+  <FMRC_AdaptiveLongSuggestion>&lt;color=#009E73&gt;建议：&lt;/color&gt;间隔超过 10 秒时，可以考虑改用手动模式。</FMRC_AdaptiveLongSuggestion>
+  <FMRC_Lazy>手动模式（仅在点击选项时验证）</FMRC_Lazy>
+  <FMRC_LazyTooltip>菜单开启期间保留初始快照，仅在点击选项时刷新并验证当前状态。</FMRC_LazyTooltip>
+  <FMRC_LazyMessage>点击验证失败时显示拒绝消息</FMRC_LazyMessage>
+  <FMRC_LazyMessageTooltip>游戏没有提供通用的失败原因；除目标消失外，提示内容只能使用概括性的说明。</FMRC_LazyMessageTooltip>
+  <FMRC_ChangesApply>设置修改会立即生效，无需重启游戏。</FMRC_ChangesApply>
+  <FMRC_ResetSettings>重置设置</FMRC_ResetSettings>
+  <FMRC_ClickValidationExplanation>说明：本Mod未关闭时，点击选项会立即按当前状态重新验证。若操作已失效，选项会变灰且菜单保持开启。此开关仅控制是否显示拒绝消息。</FMRC_ClickValidationExplanation>
+  <FMRC_TargetGone>目标已不可用。</FMRC_TargetGone>
+  <FMRC_ActionUnavailable>由于操作条件已经改变，该操作已不可用。</FMRC_ActionUnavailable>
+</LanguageData>
