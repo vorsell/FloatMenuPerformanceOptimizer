@@ -15,6 +15,23 @@
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
+    <li>fxz.moelotlzombie.update</li>
+    <li>Ancot.MiliraRace</li>
+    <li>sleepycot.wingsofdemocracy</li>
+    <li>vorsel.rigormortis.floatmenufix</li>
+    <li>vorsel.milirarace.floatmenufix</li>
+    <li>vorsel.milirawingsofdemocracy.floatmenufix</li>
   </loadAfter>
-  <description></description>
+  <description><![CDATA[Reduces sustained FPS drops while a map float menu remains open by lowering how often its options are fully regenerated.
+
+The general optimization is Off by default so you can compare performance before enabling it. Available modes are Off, Frame, Time, and Manual. Frame mode refreshes after a configurable number of rendered frames; Time mode uses a real-time interval with a four-frame minimum; Manual mode keeps the opening snapshot and revalidates only when an option is clicked. Settings apply immediately and are saved automatically.
+
+This mod also includes targeted fixes for MoeLotl: Rigor Mortis, Milira, and Milira: Wings of Democracy. Their switches appear only when the corresponding mod is active and are enabled by default. Updated standalone versions of these fixes are not required while this mod is active.
+
+In every general mode except Off, clicked options are checked against their current state. Invalid actions are disabled while the menu remains open, with an optional rejection message.
+
+This mod adds no save-persistent game content and should be safe to add or remove from an existing save. Load it after Harmony and, when sorting manually, after the affected mods.
+
+GitHub:
+https://github.com/vorsell/FloatMenuPerformanceOptimizer]]></description>
 </ModMetaData>

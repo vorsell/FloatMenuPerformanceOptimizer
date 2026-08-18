@@ -23,6 +23,11 @@
   <FMRC_LazyMessageTooltip>The game does not expose a universal failure reason, so the message is necessarily generic except when the target has disappeared.</FMRC_LazyMessageTooltip>
   <FMRC_ChangesApply>Changes apply immediately. No restart is required for settings changes.</FMRC_ChangesApply>
   <FMRC_ResetSettings>Reset settings</FMRC_ResetSettings>
+  <FMRC_CompatibilityFixes>Enable fixes</FMRC_CompatibilityFixes>
+  <FMRC_CompatibilityRigorMortis>MoeLotl: Rigor Mortis</FMRC_CompatibilityRigorMortis>
+  <FMRC_CompatibilityMilira>Milira</FMRC_CompatibilityMilira>
+  <FMRC_CompatibilityWingsOfDemocracy>Milira: Wings of Democracy</FMRC_CompatibilityWingsOfDemocracy>
+  <FMRC_CompatibilityLegacyLocked>A legacy standalone Fix DLL is currently providing this patch. Remove or update that standalone Fix and restart the game before changing this setting.</FMRC_CompatibilityLegacyLocked>
   <FMRC_ClickValidationExplanation>Explanation: Unless the mod is Off, clicking an option immediately validates its current state. If it is no longer valid, the option is disabled and the menu remains open. This checkbox only controls the rejection message.</FMRC_ClickValidationExplanation>
   <FMRC_TargetGone>The target is no longer available.</FMRC_TargetGone>
   <FMRC_ActionUnavailable>This action is no longer available because its requirements have changed.</FMRC_ActionUnavailable>

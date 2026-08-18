@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Globalization;
+using FloatMenuRevalidationControl.Compatibility;
 using UnityEngine;
 using Verse;
 
@@ -21,6 +23,9 @@ namespace FloatMenuRevalidationControl
         internal int AdaptiveIntervalHundredths =
             RevalidationRuntime.DefaultAdaptiveIntervalHundredths;
         internal bool ShowClickValidationFailureMessage = true;
+        internal bool EnableRigorMortisFix = true;
+        internal bool EnableMiliraFix = true;
+        internal bool EnableWingsOfDemocracyFix = true;
 
         public override void ExposeData()
         {
@@ -37,6 +42,18 @@ namespace FloatMenuRevalidationControl
                 ref ShowClickValidationFailureMessage,
                 "showLazyValidationFailureMessage",
                 true);
+            Scribe_Values.Look(
+                ref EnableRigorMortisFix,
+                "enableRigorMortisFix",
+                true);
+            Scribe_Values.Look(
+                ref EnableMiliraFix,
+                "enableMiliraFix",
+                true);
+            Scribe_Values.Look(
+                ref EnableWingsOfDemocracyFix,
+                "enableWingsOfDemocracyFix",
+                true);
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
@@ -46,6 +63,37 @@ namespace FloatMenuRevalidationControl
                 AdaptiveIntervalHundredths = Math.Max(
                     0,
                     AdaptiveIntervalHundredths);
+            }
+        }
+
+        internal bool GetCompatibilityFixEnabled(string moduleKey)
+        {
+            switch (moduleKey)
+            {
+                case "RigorMortis":
+                    return EnableRigorMortisFix;
+                case "MiliraRace":
+                    return EnableMiliraFix;
+                case "WingsOfDemocracy":
+                    return EnableWingsOfDemocracyFix;
+                default:
+                    return true;
+            }
+        }
+
+        internal void SetCompatibilityFixEnabled(string moduleKey, bool enabled)
+        {
+            switch (moduleKey)
+            {
+                case "RigorMortis":
+                    EnableRigorMortisFix = enabled;
+                    break;
+                case "MiliraRace":
+                    EnableMiliraFix = enabled;
+                    break;
+                case "WingsOfDemocracy":
+                    EnableWingsOfDemocracyFix = enabled;
+                    break;
             }
         }
     }
@@ -68,6 +116,7 @@ namespace FloatMenuRevalidationControl
             : base(content)
         {
             CurrentSettings = GetSettings<FloatMenuRevalidationSettings>();
+            CompatibilityManager.ApplyAllUserSettings();
         }
 
         public override string SettingsCategory()
@@ -144,6 +193,8 @@ namespace FloatMenuRevalidationControl
                 listing,
                 T("FMRC_ClickValidationExplanation"));
 
+            DrawCompatibilitySettings(listing, settings);
+
             listing.Gap(12f);
             listing.GapLine(6f);
             listing.Label(T("FMRC_ChangesApply"));
@@ -178,11 +229,65 @@ namespace FloatMenuRevalidationControl
             settings.AdaptiveIntervalHundredths =
                 RevalidationRuntime.DefaultAdaptiveIntervalHundredths;
             settings.ShowClickValidationFailureMessage = true;
+            settings.EnableRigorMortisFix = true;
+            settings.EnableMiliraFix = true;
+            settings.EnableWingsOfDemocracyFix = true;
             periodicIntervalBuffer =
                 settings.PeriodicIntervalFrames.ToString(
                     CultureInfo.InvariantCulture);
             adaptiveIntervalBuffer =
                 FormatHundredths(settings.AdaptiveIntervalHundredths);
+            CompatibilityManager.ApplyAllUserSettings();
+        }
+
+        private static void DrawCompatibilitySettings(
+            Listing_Standard listing,
+            FloatMenuRevalidationSettings settings)
+        {
+            List<FloatMenuCompatibilityDef> definitions =
+                CompatibilityManager.GetVisibleDefinitions();
+            if (definitions.Count == 0)
+            {
+                return;
+            }
+
+            listing.Gap(12f);
+            listing.GapLine(6f);
+            listing.Label(T("FMRC_CompatibilityFixes"));
+
+            for (int index = 0; index < definitions.Count; index++)
+            {
+                FloatMenuCompatibilityDef definition = definitions[index];
+                bool legacyLoaded =
+                    CompatibilityManager.IsLegacyStandaloneLoaded(definition);
+                bool enabled = legacyLoaded
+                    || settings.GetCompatibilityFixEnabled(definition.moduleKey);
+                bool previous = enabled;
+                Rect row = listing.GetRect(ControlHeight);
+                string label = string.IsNullOrEmpty(definition.settingLabelKey)
+                    ? definition.moduleKey
+                    : T(definition.settingLabelKey);
+
+                Widgets.CheckboxLabeled(
+                    row,
+                    label,
+                    ref enabled,
+                    legacyLoaded);
+
+                if (legacyLoaded)
+                {
+                    TooltipHandler.TipRegion(
+                        row,
+                        T("FMRC_CompatibilityLegacyLocked"));
+                }
+                else if (enabled != previous)
+                {
+                    settings.SetCompatibilityFixEnabled(
+                        definition.moduleKey,
+                        enabled);
+                    CompatibilityManager.ApplyUserSetting(definition.moduleKey);
+                }
+            }
         }
 
         private void DrawTimedSettings(

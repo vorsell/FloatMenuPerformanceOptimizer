@@ -11,13 +11,15 @@ A RimWorld 1.6 performance mod that controls how often map float-menu options ar
 - Every mode except Off immediately validates a clicked option against the current game state. Invalid actions are disabled without closing the menu.
 - Optional rejection messages for failed click validation.
 - English, Simplified Chinese, Traditional Chinese, Russian, Japanese, and Korean user interfaces.
+- Includes targeted fixes for MoeLotl: Rigor Mortis, Milira Race, and Milira: Wings of Democracy.
+- Targeted fix switches appear only when the corresponding mod is active, are enabled by default, and normally apply immediately.
 
 ## Requirements
 
 - RimWorld 1.6
 - Harmony
 
-Load Harmony before this mod. No special bottom-of-list placement is required.
+Load Harmony and affected target mods before this mod. No special bottom-of-list placement is required.
 
 ## Installation
 
@@ -48,13 +50,15 @@ MIT
 - 除关闭外，所有模式都会在点击选项时立即按当前游戏状态验证。失效操作会变灰，菜单保持开启。
 - 可以选择是否在点击验证失败时显示拒绝消息。
 - 支持英语、简体中文、繁体中文、俄语、日语和韩语界面。
+- 内置萌螈僵尸拓展、米莉拉和米莉拉：民主之翼的针对性右键菜单修复。
+- 仅在启用对应目标 Mod 时显示修复开关；默认启用，正常情况下修改立即生效。
 
 ## 依赖
 
 - RimWorld 1.6
 - Harmony
 
-将 Harmony 排在本 Mod 前面即可，不需要刻意放在 Mod 列表底部。
+将 Harmony 和对应目标 Mod 排在本 Mod 前面即可，不需要刻意放在 Mod 列表底部。
 
 ## 安装
 

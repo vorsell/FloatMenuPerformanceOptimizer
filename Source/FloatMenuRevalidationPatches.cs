@@ -19,7 +19,7 @@ namespace FloatMenuRevalidationControl
             Harmony harmony = new Harmony(
                 "vorsel.floatmenuperformanceoptimizer");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-            Log.Message("[FMRC] Float Menu Performance Optimizer initialized.");
+            Log.Message("[FMPO] Float Menu Performance Optimizer initialized.");
         }
     }
 
@@ -88,22 +88,22 @@ namespace FloatMenuRevalidationControl
             lastReportedValue = value;
             if (mode == RevalidationMode.Lazy)
             {
-                Log.Message("[FMRC] Active mode: Lazy. Open-menu revalidation is bypassed; click validation remains active.");
+                Log.Message("[FMPO] Active mode: Lazy. Open-menu revalidation is bypassed; click validation remains active.");
             }
             else if (mode == RevalidationMode.Periodic)
             {
-                Log.Message("[FMRC] Active mode: Timed, full regeneration every " + value + " rendered frames.");
+                Log.Message("[FMPO] Active mode: Timed, full regeneration every " + value + " rendered frames.");
             }
             else if (mode == RevalidationMode.Adaptive)
             {
                 Log.Message(
-                    "[FMRC] Active mode: Adaptive, target interval "
+                    "[FMPO] Active mode: Adaptive, target interval "
                     + EffectiveAdaptiveIntervalSeconds().ToString("0.00")
                     + " real seconds with a 4-frame minimum.");
             }
             else
             {
-                Log.Message("[FMRC] Active mode: Disabled (vanilla behavior).");
+                Log.Message("[FMPO] Active mode: Disabled (vanilla behavior).");
             }
         }
 
@@ -362,7 +362,7 @@ namespace FloatMenuRevalidationControl
                 || batchComparisonEndIndex < 0
                 || batchDivisorIndex < 0)
             {
-                Log.Error("[FMRC] FloatMenuMap.DoWindowContents layout was not recognized; leaving vanilla behavior unchanged.");
+                Log.Error("[FMPO] FloatMenuMap.DoWindowContents layout was not recognized; leaving vanilla behavior unchanged.");
                 return codes;
             }
 

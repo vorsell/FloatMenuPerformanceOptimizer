@@ -23,6 +23,11 @@
   <FMRC_LazyMessageTooltip>游戏没有提供通用的失败原因；除目标消失外，提示内容只能使用概括性的说明。</FMRC_LazyMessageTooltip>
   <FMRC_ChangesApply>设置修改会立即生效，无需重启游戏。</FMRC_ChangesApply>
   <FMRC_ResetSettings>重置设置</FMRC_ResetSettings>
+  <FMRC_CompatibilityFixes>是否启用修复</FMRC_CompatibilityFixes>
+  <FMRC_CompatibilityRigorMortis>萌螈僵尸拓展</FMRC_CompatibilityRigorMortis>
+  <FMRC_CompatibilityMilira>米莉拉</FMRC_CompatibilityMilira>
+  <FMRC_CompatibilityWingsOfDemocracy>米莉拉：民主之翼</FMRC_CompatibilityWingsOfDemocracy>
+  <FMRC_CompatibilityLegacyLocked>当前补丁由旧版独立 Fix DLL 提供。请移除或更新该独立 Fix 并重启游戏后再修改此设置。</FMRC_CompatibilityLegacyLocked>
   <FMRC_ClickValidationExplanation>说明：本Mod未关闭时，点击选项会立即按当前状态重新验证。若操作已失效，选项会变灰且菜单保持开启。此开关仅控制是否显示拒绝消息。</FMRC_ClickValidationExplanation>
   <FMRC_TargetGone>目标已不可用。</FMRC_TargetGone>
   <FMRC_ActionUnavailable>由于操作条件已经改变，该操作已不可用。</FMRC_ActionUnavailable>

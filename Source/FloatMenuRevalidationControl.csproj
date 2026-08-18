@@ -53,6 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compatibility\CompatibilityManager.cs" />
+    <Compile Include="Compatibility\CompatibilityStartup.cs" />
+    <Compile Include="Compatibility\StandaloneFixNotice.cs" />
+    <Compile Include="Compatibility\RigorMortis\RigorMortisCompatibilityModule.cs" />
+    <Compile Include="Compatibility\MiliraRace\MiliraRaceCompatibilityModule.cs" />
+    <Compile Include="Compatibility\WingsOfDemocracy\WingsOfDemocracyCompatibilityModule.cs" />
     <Compile Include="FloatMenuRevalidationControlMod.cs" />
     <Compile Include="FloatMenuRevalidationPatches.cs" />
   </ItemGroup>

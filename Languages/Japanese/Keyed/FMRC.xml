@@ -23,6 +23,11 @@
   <FMRC_LazyMessageTooltip>ゲームは共通の失敗理由を提供しないため、対象が消えた場合を除き、メッセージは一般的な内容になります。</FMRC_LazyMessageTooltip>
   <FMRC_ChangesApply>設定変更は即座に適用されます。ゲームの再起動は不要です。</FMRC_ChangesApply>
   <FMRC_ResetSettings>設定をリセット</FMRC_ResetSettings>
+  <FMRC_CompatibilityFixes>修正を有効化</FMRC_CompatibilityFixes>
+  <FMRC_CompatibilityRigorMortis>MoeLotl: Rigor Mortis</FMRC_CompatibilityRigorMortis>
+  <FMRC_CompatibilityMilira>Milira</FMRC_CompatibilityMilira>
+  <FMRC_CompatibilityWingsOfDemocracy>Milira: Wings of Democracy</FMRC_CompatibilityWingsOfDemocracy>
+  <FMRC_CompatibilityLegacyLocked>このパッチは現在、旧版の単体 Fix DLL によって提供されています。この設定を変更するには、その単体 Fix を削除または更新してからゲームを再起動してください。</FMRC_CompatibilityLegacyLocked>
   <FMRC_ClickValidationExplanation>説明：本Modがオフでない場合、選択肢をクリックすると現在の状態を即時検証します。操作が無効なら選択肢を無効化し、メニューは開いたままにします。このチェックは拒否メッセージの表示だけを切り替えます。</FMRC_ClickValidationExplanation>
   <FMRC_TargetGone>対象は利用できなくなりました。</FMRC_TargetGone>
   <FMRC_ActionUnavailable>条件が変化したため、この操作は利用できなくなりました。</FMRC_ActionUnavailable>

@@ -23,6 +23,11 @@
   <FMRC_LazyMessageTooltip>Игра не предоставляет универсальную причину отказа, поэтому сообщение является общим, кроме случая исчезновения цели.</FMRC_LazyMessageTooltip>
   <FMRC_ChangesApply>Изменения применяются сразу. Перезапуск игры не требуется.</FMRC_ChangesApply>
   <FMRC_ResetSettings>Сбросить настройки</FMRC_ResetSettings>
+  <FMRC_CompatibilityFixes>Включить исправления</FMRC_CompatibilityFixes>
+  <FMRC_CompatibilityRigorMortis>MoeLotl: Rigor Mortis</FMRC_CompatibilityRigorMortis>
+  <FMRC_CompatibilityMilira>Milira</FMRC_CompatibilityMilira>
+  <FMRC_CompatibilityWingsOfDemocracy>Milira: Wings of Democracy</FMRC_CompatibilityWingsOfDemocracy>
+  <FMRC_CompatibilityLegacyLocked>Сейчас этот патч предоставляет устаревшая отдельная DLL Fix. Чтобы изменить эту настройку, удалите или обновите отдельный Fix и перезапустите игру.</FMRC_CompatibilityLegacyLocked>
   <FMRC_ClickValidationExplanation>Описание: если мод не выключен, выбранное действие сразу проверяется по текущему состоянию. Недоступный вариант отключается, а меню остаётся открытым. Флажок управляет только сообщением об отказе.</FMRC_ClickValidationExplanation>
   <FMRC_TargetGone>Цель больше недоступна.</FMRC_TargetGone>
   <FMRC_ActionUnavailable>Действие больше недоступно, так как его условия изменились.</FMRC_ActionUnavailable>
