@@ -88,22 +88,22 @@ namespace FloatMenuRevalidationControl
             lastReportedValue = value;
             if (mode == RevalidationMode.Lazy)
             {
-                Log.Message("[FMPO] Active mode: Lazy. Open-menu revalidation is bypassed; click validation remains active.");
+                Log.Message("[FMPO] Active mode: Manual mode. Open-menu revalidation is bypassed; click validation remains active.");
             }
             else if (mode == RevalidationMode.Periodic)
             {
-                Log.Message("[FMPO] Active mode: Timed, full regeneration every " + value + " rendered frames.");
+                Log.Message("[FMPO] Active mode: Frame mode, full regeneration every " + value + " rendered frames.");
             }
             else if (mode == RevalidationMode.Adaptive)
             {
                 Log.Message(
-                    "[FMPO] Active mode: Adaptive, target interval "
+                    "[FMPO] Active mode: Time mode, target interval "
                     + EffectiveAdaptiveIntervalSeconds().ToString("0.00")
                     + " real seconds with a 4-frame minimum.");
             }
             else
             {
-                Log.Message("[FMPO] Active mode: Disabled (vanilla behavior).");
+                Log.Message("[FMPO] Active mode: Off (vanilla behavior).");
             }
         }
 
