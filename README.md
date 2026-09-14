@@ -29,7 +29,7 @@ Copy the complete `FloatMenuPerformanceOptimizer` folder into RimWorld's `Mods` 
 
 The project is in `Source/FloatMenuRevalidationControl.csproj`. Its assembly references currently point to a local RimWorld installation and Harmony Workshop directory; adjust the `HintPath` values for your environment before building.
 
-The compiled assembly is included in `Assemblies`.
+The compiled assembly is included in `1.6/Assemblies` and routed through `LoadFolders.xml`.
 
 ## License
 
@@ -68,7 +68,7 @@ MIT
 
 项目文件位于 `Source/FloatMenuRevalidationControl.csproj`。其中的程序集引用目前指向本地 RimWorld 和 Harmony 路径，在其他环境编译前需要修改相应的 `HintPath`。
 
-编译后的程序集位于 `Assemblies`。
+编译后的程序集位于 `1.6/Assemblies`，并通过 `LoadFolders.xml` 加载。
 
 ## 许可证
 

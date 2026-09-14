@@ -119,15 +119,15 @@ namespace FloatMenuRevalidationControl
             FloatMenu menu,
             FloatMenuOption option)
         {
-            bool matches = ReferenceEquals(pendingKeepOpenMenu, menu)
-                && ReferenceEquals(pendingKeepOpenOption, option);
-            if (matches)
-            {
-                pendingKeepOpenMenu = null;
-                pendingKeepOpenOption = null;
-            }
+            FloatMenu requestedMenu = pendingKeepOpenMenu;
+            FloatMenuOption requestedOption = pendingKeepOpenOption;
+            pendingKeepOpenMenu = null;
+            pendingKeepOpenOption = null;
 
-            return matches;
+            return requestedMenu != null
+                && requestedOption != null
+                && ReferenceEquals(requestedMenu, menu)
+                && ReferenceEquals(requestedOption, option);
         }
 
         internal static int RegenerationGate(FloatMenuMap menu)
@@ -527,24 +527,19 @@ namespace FloatMenuRevalidationControl
         private static readonly FieldInfo CachedChoicesField =
             AccessTools.Field(typeof(FloatMenuMap), "cachedChoices");
 
+        private static bool cachedChoicesAccessFailed;
+        private static bool cachedChoicesWarningLogged;
+
         private static void Prefix(
             [HarmonyArgument(0)] FloatMenuOption option,
             out ClickValidationState __state)
         {
             bool clickValidationEnabled =
                 RevalidationRuntime.Settings.Mode != RevalidationMode.Disabled;
-            if (clickValidationEnabled)
-            {
-                Dictionary<Vector3, List<FloatMenuOption>> cachedChoices =
-                    CachedChoicesField.GetValue(null)
-                    as Dictionary<Vector3, List<FloatMenuOption>>;
-                if (cachedChoices != null)
-                {
-                    cachedChoices.Clear();
-                }
-            }
+            bool clickValidationActive = clickValidationEnabled
+                && TryClearCachedChoices();
 
-            bool wasEnabled = clickValidationEnabled
+            bool wasEnabled = clickValidationActive
                 && option != null
                 && !option.Disabled;
             __state = new ClickValidationState
@@ -577,6 +572,63 @@ namespace FloatMenuRevalidationControl
                 FailureMessage(option),
                 MessageTypeDefOf.RejectInput,
                 historical: false);
+        }
+
+        private static bool TryClearCachedChoices()
+        {
+            if (cachedChoicesAccessFailed)
+            {
+                return false;
+            }
+
+            if (CachedChoicesField == null || !CachedChoicesField.IsStatic)
+            {
+                DisableClickValidation(
+                    "FloatMenuMap.cachedChoices was not found as a static field.");
+                return false;
+            }
+
+            try
+            {
+                object value = CachedChoicesField.GetValue(null);
+                if (value == null)
+                {
+                    return true;
+                }
+
+                Dictionary<Vector3, List<FloatMenuOption>> cachedChoices =
+                    value as Dictionary<Vector3, List<FloatMenuOption>>;
+                if (cachedChoices == null)
+                {
+                    DisableClickValidation(
+                        "FloatMenuMap.cachedChoices has an unsupported type.");
+                    return false;
+                }
+
+                cachedChoices.Clear();
+                return true;
+            }
+            catch (Exception exception)
+            {
+                DisableClickValidation(
+                    "FloatMenuMap.cachedChoices could not be accessed: "
+                    + exception.GetType().Name + ".");
+                return false;
+            }
+        }
+
+        private static void DisableClickValidation(string reason)
+        {
+            cachedChoicesAccessFailed = true;
+            if (cachedChoicesWarningLogged)
+            {
+                return;
+            }
+
+            cachedChoicesWarningLogged = true;
+            Log.Warning(
+                "[FMPO] Click validation is unavailable; falling back to "
+                + "vanilla click behavior. " + reason);
         }
 
         private static string FailureMessage(FloatMenuOption option)
