@@ -17,7 +17,7 @@ namespace FloatMenuRevalidationControl
 
     internal sealed class FloatMenuRevalidationSettings : ModSettings
     {
-        internal RevalidationMode Mode = RevalidationMode.Disabled;
+        internal RevalidationMode Mode = RevalidationMode.Adaptive;
         internal int PeriodicIntervalFrames =
             RevalidationRuntime.DefaultTimedIntervalFrames;
         internal int AdaptiveIntervalHundredths =
@@ -29,7 +29,14 @@ namespace FloatMenuRevalidationControl
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref Mode, "mode", RevalidationMode.Disabled);
+            // Legacy settings omit mode when it is Disabled. Keep that loading
+            // fallback, but always save the actual mode so fresh/reset Adaptive
+            // settings do not become Disabled on the next load.
+            Scribe_Values.Look(
+                ref Mode,
+                "mode",
+                RevalidationMode.Disabled,
+                forceSave: true);
             Scribe_Values.Look(
                 ref PeriodicIntervalFrames,
                 "periodicIntervalFrames",
@@ -223,7 +230,7 @@ namespace FloatMenuRevalidationControl
         internal void ResetSettingsToDefaults()
         {
             FloatMenuRevalidationSettings settings = CurrentSettings;
-            settings.Mode = RevalidationMode.Disabled;
+            settings.Mode = RevalidationMode.Adaptive;
             settings.PeriodicIntervalFrames =
                 RevalidationRuntime.DefaultTimedIntervalFrames;
             settings.AdaptiveIntervalHundredths =

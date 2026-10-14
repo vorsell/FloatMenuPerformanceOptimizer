@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>FloatMenuRevalidationControl</RootNamespace>
+    <AssemblyName>FloatMenuRevalidationControl</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\1.7\Assemblies\</OutputPath>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Deterministic>true</Deterministic>
+    <NuGetAudit>false</NuGetAudit>
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''">G:\SteamLibrary\steamapps\common\RimWorld</RimWorldDir>
+    <HarmonyDir Condition="'$(HarmonyDir)' == ''">G:\SteamLibrary\steamapps\workshop\content\294100\2009463077\1.7\Assemblies</HarmonyDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)\UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compatibility\CompatibilityManager.cs" />
+    <Compile Include="Compatibility\CompatibilityStartup.cs" />
+    <Compile Include="Compatibility\StandaloneFixNotice.cs" />
+    <Compile Include="Compatibility\RigorMortis\RigorMortisCompatibilityModule.cs" />
+    <Compile Include="Compatibility\MiliraRace\MiliraRaceCompatibilityModule.cs" />
+    <Compile Include="Compatibility\WingsOfDemocracy\WingsOfDemocracyCompatibilityModule.cs" />
+    <Compile Include="FloatMenuRevalidationControlMod.cs" />
+    <Compile Include="FloatMenuRevalidationPatches.cs" />
+  </ItemGroup>
+</Project>

@@ -5,6 +5,7 @@
   <packageId>vorsel.floatmenuperformanceoptimizer</packageId>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -24,7 +25,7 @@
   </loadAfter>
   <description><![CDATA[Reduces sustained FPS drops while a map float menu remains open by lowering how often its options are fully regenerated.
 
-The general optimization is Off by default so you can compare performance before enabling it. Available modes are Off, Frame, Time, and Manual. Frame mode refreshes after a configurable number of rendered frames; Time mode uses a real-time interval with a four-frame minimum; Manual mode keeps the opening snapshot and revalidates only when an option is clicked. Settings apply immediately and are saved automatically.
+On RimWorld 1.6 and 1.7, new configurations and Reset Settings default to Time mode at 0.50 seconds. Existing saved configurations keep their mode, intervals, and switches. Available modes are Off, Frame, Time, and Manual. Frame mode refreshes after a configurable number of rendered frames; Time mode uses a real-time interval with a four-frame minimum; Manual mode keeps the opening snapshot and revalidates only when an option is clicked. Settings apply immediately and are saved automatically.
 
 This mod also includes targeted fixes for MoeLotl: Rigor Mortis, Milira, and Milira: Wings of Democracy. Their switches appear only when the corresponding mod is active and are enabled by default. Updated standalone versions of these fixes are not required while this mod is active.
 

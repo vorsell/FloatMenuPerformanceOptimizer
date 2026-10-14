@@ -1,6 +1,8 @@
 # Float Menu Performance Optimizer
 
-A RimWorld 1.6 performance mod that controls how often map float-menu options are regenerated while preserving click-time validity checks.
+A RimWorld 1.6 / 1.7 performance mod that controls how often map float-menu options are regenerated while preserving click-time validity checks.
+
+New configurations and Reset Settings default to Time mode at 0.50 seconds. Updating preserves existing saved modes, intervals, and switches.
 
 ## Features
 
@@ -16,7 +18,7 @@ A RimWorld 1.6 performance mod that controls how often map float-menu options ar
 
 ## Requirements
 
-- RimWorld 1.6
+- RimWorld 1.6 or 1.7
 - Harmony
 
 Load Harmony and affected target mods before this mod. No special bottom-of-list placement is required.
@@ -27,9 +29,13 @@ Copy the complete `FloatMenuPerformanceOptimizer` folder into RimWorld's `Mods` 
 
 ## Building
 
-The project is in `Source/FloatMenuRevalidationControl.csproj`. Its assembly references currently point to a local RimWorld installation and Harmony Workshop directory; adjust the `HintPath` values for your environment before building.
+For RimWorld 1.6, use `Source/FloatMenuRevalidationControl.csproj` with modern MSBuild, .NET Framework 4.8.1, and x64 Release. Set `RimWorld16DependenciesDir` to a preserved 1.6 reference snapshot containing `Managed/` and `Harmony/`; do not replace these references with 1.7 assemblies.
 
-The compiled assembly is included in `1.6/Assemblies` and routed through `LoadFolders.xml`.
+For RimWorld 1.7, use `Source/FloatMenuRevalidationControl.1.7.csproj` with the .NET 10 SDK and x64 Release. Set `RimWorldDir` to the 1.7 installation and `HarmonyDir` to its compatible Harmony assembly directory.
+
+Compiled assemblies are included separately in `1.6/Assemblies` and `1.7/Assemblies`. `LoadFolders.xml` selects only the matching version. Redirect build and intermediate outputs to staging for compile-only checks; exit the game before replacing active DLLs.
+
+The final 1.7 build passed manual gameplay checks. The updated 1.6 defaults passed compilation, assembly-reference checks, and 15 offline settings checks; the new 1.6 DLL has not yet been retested in the 1.6 game.
 
 ## License
 
@@ -39,7 +45,9 @@ MIT
 
 # 右键菜单性能优化
 
-这是一个适用于 RimWorld 1.6 的性能优化 Mod，用于控制地图右键菜单选项在菜单开启期间的完整重新生成频率，同时保留点击时的有效性检查。
+这是一个适用于 RimWorld 1.6 / 1.7 的性能优化 Mod，用于控制地图右键菜单选项在菜单开启期间的完整重新生成频率，同时保留点击时的有效性检查。
+
+新配置及“重置设置”默认使用时间模式，间隔 0.50 秒。更新会保留已有配置的模式、间隔与开关。
 
 ## 功能
 
@@ -55,7 +63,7 @@ MIT
 
 ## 依赖
 
-- RimWorld 1.6
+- RimWorld 1.6 或 1.7
 - Harmony
 
 将 Harmony 和对应目标 Mod 排在本 Mod 前面即可，不需要刻意放在 Mod 列表底部。
@@ -66,9 +74,13 @@ MIT
 
 ## 编译
 
-项目文件位于 `Source/FloatMenuRevalidationControl.csproj`。其中的程序集引用目前指向本地 RimWorld 和 Harmony 路径，在其他环境编译前需要修改相应的 `HintPath`。
+RimWorld 1.6 使用 `Source/FloatMenuRevalidationControl.csproj`，以现代 MSBuild 编译 .NET Framework 4.8.1 / x64 Release。将 `RimWorld16DependenciesDir` 指向包含 `Managed/` 和 `Harmony/` 的固定 1.6 引用快照，不可混用 1.7 程序集。
 
-编译后的程序集位于 `1.6/Assemblies`，并通过 `LoadFolders.xml` 加载。
+RimWorld 1.7 使用 `Source/FloatMenuRevalidationControl.1.7.csproj`，以 .NET 10 SDK 编译 x64 Release；通过 `RimWorldDir` 和 `HarmonyDir` 指定 1.7 游戏及兼容 Harmony 目录。
+
+两版程序集分别位于 `1.6/Assemblies` 和 `1.7/Assemblies`，由 `LoadFolders.xml` 只加载匹配版本。仅编译检查时应将输出与中间文件重定向到 staging；替换活动 DLL 前须退出游戏。
+
+最终 1.7 构建已通过游戏内手测。1.6 默认值补编已通过编译、程序集引用及 15 项离线设置检查，新 1.6 DLL 尚未在 1.6 游戏中重新验收。
 
 ## 许可证
 

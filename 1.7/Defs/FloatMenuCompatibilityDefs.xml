@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Set enabled to false when the upstream mod fixes the issue. -->
+  <FloatMenuRevalidationControl.Compatibility.FloatMenuCompatibilityDef>
+    <defName>FMPO_Compatibility_RigorMortis</defName>
+    <moduleKey>RigorMortis</moduleKey>
+    <targetPackageId>fxz.moelotlzombie.update</targetPackageId>
+    <legacyAssemblyName>RigorMortisFloatMenuFix</legacyAssemblyName>
+    <settingLabelKey>FMRC_CompatibilityRigorMortis</settingLabelKey>
+    <enabled>true</enabled>
+  </FloatMenuRevalidationControl.Compatibility.FloatMenuCompatibilityDef>
+  <FloatMenuRevalidationControl.Compatibility.FloatMenuCompatibilityDef>
+    <defName>FMPO_Compatibility_MiliraRace</defName>
+    <moduleKey>MiliraRace</moduleKey>
+    <targetPackageId>Ancot.MiliraRace</targetPackageId>
+    <legacyAssemblyName>MiliraRaceFloatMenuFix</legacyAssemblyName>
+    <settingLabelKey>FMRC_CompatibilityMilira</settingLabelKey>
+    <enabled>true</enabled>
+  </FloatMenuRevalidationControl.Compatibility.FloatMenuCompatibilityDef>
+  <FloatMenuRevalidationControl.Compatibility.FloatMenuCompatibilityDef>
+    <defName>FMPO_Compatibility_WingsOfDemocracy</defName>
+    <moduleKey>WingsOfDemocracy</moduleKey>
+    <targetPackageId>sleepycot.wingsofdemocracy</targetPackageId>
+    <legacyAssemblyName>MiliraWingsOfDemocracyFloatMenuFix</legacyAssemblyName>
+    <settingLabelKey>FMRC_CompatibilityWingsOfDemocracy</settingLabelKey>
+    <enabled>true</enabled>
+  </FloatMenuRevalidationControl.Compatibility.FloatMenuCompatibilityDef>
+</Defs>
